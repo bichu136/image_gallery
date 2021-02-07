@@ -1,0 +1,66 @@
+
+------------------------------------------------------------------------------------------
+N: normal user
+M: morderator user
+A: admin
+G: guest
+Name                Access          Description
+AUTH 0
+login           
+logout         
+register
+change password
+
+
+
+prior 1
+thêm ảnh vào poll   M,N             moi anh them moi se co 7 ngay de 
+
+
+prior 2
+chỉnh sửa các tag   M,N
+search theo tag
+đánh giá NSFW       M
+
+
+BASIC 2
+comment lên ảnh   
+thêm source vào ảnh
+tag va danh gia
+xem ảnh             M,N,G           xem cac anh tuy thuoc vao cai dat
+---------------------------------------------------------------------------------------
+các thông tin
+
+thông tin ảnh:
+cac tag
+directory (duong dan den anh)
+NSFW điểm
+comments
+trạng thái
+source
+id_user_add
+ngay_add
+các duplicate id (id của những ảnh trùng lặp)
+
+thông tin tag:
+id
+loại tag (tag category)
+diễn tả
+id_tag_cha
+
+
+comments:
+user
+ảnh_nào
+nội dung
+
+user:
+uid
+id
+password
+avatar
+tag_count
+image_add_count
+list anh yeu thich
+
+
