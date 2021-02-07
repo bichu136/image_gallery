@@ -5,29 +5,27 @@ M: morderator user
 A: admin
 G: guest
 Name                Access          Description
-AUTH 0
-login           
-logout         
+AUTH prior 0
+login/out           
 register
 change password
 
-
-
 prior 1
-thêm ảnh vào poll   M,N             moi anh them moi se co 7 ngay de 
-
+thêm ảnh vào poll   M,N             moi anh them moi se co 7 ngay de danh gia
 
 prior 2
+comment lên ảnh   
+thêm thong tin anh  N,M
 chỉnh sửa các tag   M,N
+xem ảnh             M,N,G           
+
+addons 
+nhấn tim	    M,N
 search theo tag
 đánh giá NSFW       M
 
 
-BASIC 2
-comment lên ảnh   
-thêm source vào ảnh
-tag va danh gia
-xem ảnh             M,N,G           xem cac anh tuy thuoc vao cai dat
+
 ---------------------------------------------------------------------------------------
 các thông tin
 
@@ -41,6 +39,7 @@ source
 id_user_add
 ngay_add
 các duplicate id (id của những ảnh trùng lặp)
+status (gán nhãn,duyệt, đóng)
 
 thông tin tag:
 id
