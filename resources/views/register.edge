@@ -1,7 +1,9 @@
 @layout('layouts.main_layout')
 
 @section('custom_style')
-{{style('style/login.css')}}
+
+  {{style('style/login.css')}}
+
 @endsection
 
 @section('body')
@@ -11,28 +13,30 @@
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="mb-4">
-            <h3>Đăng nhập</h3>
-            <p class="mb-4">Cùng đến kho ảnh có nhãn của chúng ta.</p>
+            <h3>Đăng ký</h3>
+            <p class="mb-4">Chào mừng bạn đến với trang web</p>
           </div>
-          <form action="" method="post">
-            {{ csrfField() }}
+          <form action="{{ route('new_member') }}" method="post">
+            {{csrfField()}}
             <div class="form-group first">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" name='username'>
+              <label for="username">Tên Đăng nhập</label>
+              <input type="text" class="form-control" id="username" name="username">
 
             </div>
             <div class="form-group last mb-4">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" name='password'>
+              <label for="password">Mật Khẩu</label>
+              <input type="password" class="form-control" id="password" name="password">
 
             </div>
+            <div class="form-group mb-4">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
 
+            </div>
             <div class="d-flex mb-5 align-items-center">
-              <span class="caption"><a href="/register" class="sigin up">đăng ký</a></span>
-              <span class="ml-auto"><a href="#" class="forgot-pass">quên mật khẩu</a></span>
+              <span class="caption"><input type='checkbox' href="#" class="sigin up" id='agreement'>Đồng ý điều khoản??</span>
             </div>
-
-            <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
+            <input type="submit" value="đăng ký" class="btn text-white btn-block btn-primary">
 
             <!--<span class="d-block text-left my-4 text-muted"> or sign in with</span>
 

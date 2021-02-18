@@ -1,0 +1,100 @@
+
+
+@layout('layouts.main_layout')
+
+@section('custom_style')
+{{style('style/mainpage')}}
+@endsection
+
+@section('body')
+<div class = 'content'>
+  <div class='info'>
+  </div>
+  <div class = 'img_content'>
+      <div class = 'img_collumn'>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+      </div>
+      <div class = 'img_collumn'>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+      </div>
+      <div class = 'img_collumn'>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+      </div>
+      <div class = 'img_collumn'>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+      </div>
+      <div class = 'img_collumn'>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+        <div class = 'image'>
+
+        </div>
+      </div>
+      <div class ='page_change'>
+      </div>
+  </div>
+
+</div>
+<form action="/logout" method="POST">
+  {{ csrfField() }}
+  <input type="submit" value="logout" class="">
+</form>
+
+
+</div>
+@endsection
+
+@section('custom_script')
+
+@endsection

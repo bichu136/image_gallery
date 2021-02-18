@@ -6,6 +6,7 @@ const Hash = use('Hash')
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
 
+const Database = use('Database')
 class User extends Model {
   static boot () {
     super.boot()
@@ -33,6 +34,9 @@ class User extends Model {
    */
   tokens () {
     return this.hasMany('App/Models/Token')
+  }
+  async AddToDatabase(register_data){
+    var x = await Database.table('users').insert(register_data);
   }
 }
 
