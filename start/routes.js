@@ -1,6 +1,7 @@
 'use strict'
 
-const { route } = require('@adonisjs/framework/src/Route/Manager')
+const { route } = require('@adonisjs/framework/src/Route/Manager');
+const LoginController = require('../app/Controllers/Http/LoginController');
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,15 @@ const { route } = require('@adonisjs/framework/src/Route/Manager')
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('index');
+Route.on('/').render('mainpage');
 Route.get('/api/1','OneController.one').as('x');
-Route.on('/login').render('login')
+Route.get('/login','LoginController.view').middleware(['guest'])
+Route.get('/login','LoginController.redirect').middleware(['auth'])
+
+
+Route.get('register','RegisterController.FillForm')
+Route.post('/register','RegisterController.AddToDatabase').as('new_member')
+Route.post('/login', 'LoginController.login').middleware('guest')
+Route.post('/logout','LoginController.logout').middleware(['auth'])
+Route.get('users/:id', 'ProfileController.show').middleware('auth')
+
