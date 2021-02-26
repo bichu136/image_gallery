@@ -1,14 +1,15 @@
 @layout('layouts.main_layout')
 
 @section('custom_style')
-
+{{style('style/mainpage.css')}}
 @endsection
 
 @section('body')
 <p>
 username {{username}}<br>
-bias {{bias}}
+bias
 </p>
+@include('components.profile.bias')
 @endsection
 
 @section('custom_script')
