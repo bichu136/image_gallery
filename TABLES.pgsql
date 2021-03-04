@@ -9,7 +9,7 @@ insert into moderate_statuses (name) values ('TAG');
 insert into moderate_statuses (name) values ('MOD');
 insert into moderate_statuses (name) values ('DON');
 
-select * from roles;
+select * from users;
 select * from profiles;
 
 
