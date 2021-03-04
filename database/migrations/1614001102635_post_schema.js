@@ -10,7 +10,7 @@ class PostSchema extends Schema {
       table.string('image_dir',1000).notNullable()
       table.string('source_url',1000)
       table.integer('moderate_status_id')
-      table.integer('user_post_id')
+      table.integer('user_id')
       table.integer('related_post')
       table.integer('duplicating_post')
       table.timestamps()

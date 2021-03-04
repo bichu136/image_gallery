@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class ModerateStatus extends Model {
+  posts(){
+    return this.hasMany('Apps/Models/Post')
+  }
 }
 
 module.exports = ModerateStatus

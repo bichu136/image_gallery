@@ -8,6 +8,7 @@ class AvartarImageSchema extends Schema {
     this.create('avartar_images', (table) => {
       table.increments()
       table.string('images_path', 1000).notNullable().unique()
+      table.integer('profiles_id')
       table.timestamps()
     })
   }

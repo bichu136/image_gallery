@@ -19,7 +19,7 @@ const LoginController = require('../app/Controllers/Http/LoginController');
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('mainpage');
+Route.get('/','MainPageController.mainPage');
 Route.get('/api/1','OneController.one').as('x');
 Route.get('/login','LoginController.view').middleware(['guest'])
 Route.get('/login','LoginController.redirect').middleware(['auth'])

@@ -5,11 +5,10 @@
 @endsection
 
 @section('body')
-<p>
-username {{username}}<br>
-bias
-</p>
+
+@include('components.profile.user_card')
 @include('components.profile.bias')
+@include('components.profile.counters')
 @endsection
 
 @section('custom_script')

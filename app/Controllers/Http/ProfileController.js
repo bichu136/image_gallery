@@ -8,9 +8,8 @@ class ProfileController {
       return "You cannot see someone else's profile"
     }
     var user = await User.find(auth.user.id);
-    // var profile = user.profile().fetch();
-
-    return view.render('profile',{username:user.username,bias:''})
+    var profile = await user.profile().fetch();
+    return view.render('profile',{username:user.username,bias:profile.bias,tag_count:profile.tag_count,image_count:profile.image_count})
   }
 }
 

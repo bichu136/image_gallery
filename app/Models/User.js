@@ -39,10 +39,16 @@ class User extends Model {
     return this.hasOne('App/Models/Profile')
   }
   role(){
-    return this.hasOne('App/Models/Role')
+    return this.belongsTo('App/Models/Role')
   }
   async AddToDatabase(register_data){
     var x = await Database.table('users').insert(register_data);
+  }
+  comments(){
+    return this.hasMany('App/Models/Comment')
+  }
+  posts(){
+    return this.hasMany('App/Models/Post')
   }
 }
 
